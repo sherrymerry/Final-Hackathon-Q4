@@ -3,10 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cow Purchase Chatbot</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            overflow: hidden;
+        }
+        .background-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('images/logo.webp');
+            background-size: cover;
+            background-position: center;
+            filter: blur(8px);
+            z-index: -1;
+        }
+        .chatbot-container {
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            width: 80%;
+            max-width: 500px;
+            text-align: center;
+        }
+        .chatbot-container h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        df-messenger {
+            --df-messenger-bot-message: #377dff;
+            --df-messenger-button-titlebar-color: #377dff;
+            --df-messenger-chat-background-color: #f5f5f5;
+            --df-messenger-font-color: white;
+            --df-messenger-send-icon: #377dff;
+        }
+    </style>
 </head>
 <body>
+    <div class="background-image"></div>
+    <div class="chatbot-container">
+        <h1>Welcome to Cow Purchase Chatbot</h1>
+        <df-messenger
+            intent="WELCOME"
+            chat-title="Cow_purchase"
+            agent-id="203ca8d4-1ebc-4921-93e3-09a9b5e534f5"
+            language-code="en"
+        ></df-messenger>
+    </div>
 
-    
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
 </body>
 </html>
