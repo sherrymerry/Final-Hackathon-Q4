@@ -119,6 +119,7 @@
 //     console.log(`Server is running on port ${PORT}`);
 // });
 
+
 const { WebhookClient, Suggestion } = require('dialogflow-fulfillment');
 const express = require("express");
 const cors = require("cors");
@@ -138,8 +139,8 @@ const slackClient = new WebClient(slackToken);
 const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-        user: 'your-email@gmail.com',
-        pass: 'your-email-password'
+        user: 'sherrymerry20@gmail.com',
+        pass: '12qw34er'
     }
 });
 
@@ -157,11 +158,7 @@ function purchaseCow(agent) {
     age = parameters.age;
     location = parameters.location;
 
-    agent.add(`You have chosen the following preferences: 
-               Cow Type: ${cowType}, 
-               Budget: ${budget}, 
-               Age: ${age}, 
-               Location: ${location}. 
+    agent.add(`You are looking for a ${cowType} cow in ${location} with a budget of ${budget} and age ${age}. 
                Do you confirm these choices?`);
     agent.add(new Suggestion('Yes'));
     agent.add(new Suggestion('No'));
