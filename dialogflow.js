@@ -147,8 +147,8 @@ const transporter = nodemailer.createTransport({
 let cowType, budget, age, location;
 
 function welcome(agent) {
-    agent.add(`Welcome to the Cow Purchase Bot! How can I assist you today?`);
-    agent.add(new Suggestion('Purchase a cow'));
+    agent.add(`Welcome to the Cow Purchase Bot! How can I assist you today?If you want to Purchase a cow write Purchase a cow?`);
+    // agent.add(new Suggestion('Purchase a cow'));
 }
 
 function purchaseCow(agent) {
@@ -158,7 +158,7 @@ function purchaseCow(agent) {
     age = parameters.age;
     location = parameters.location;
 
-    agent.add(`You are looking for a ${cowType} cow in ${location} with a budget of ${budget} and age ${age}. 
+    agent.add(`You are looking for a ${cowType} cow in ${location} with a budget of ${budget} and age is ${age}. 
                Do you confirm these choices?`);
     agent.add(new Suggestion('Yes'));
     agent.add(new Suggestion('No'));
