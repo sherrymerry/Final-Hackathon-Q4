@@ -132,8 +132,8 @@ app.use(cors());
 
 const PORT = process.env.PORT || 8080;
 
-const slackToken = 'your-slack-token';
-const slackChannel = 'your-slack-channel-id';
+const slackToken = 'DbodBoZ8HpeRUPouF1esaaeo';
+const slackChannel = '7268508135703.7276441541270';
 const slackClient = new WebClient(slackToken);
 
 const transporter = nodemailer.createTransport({
