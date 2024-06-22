@@ -67,7 +67,6 @@
 //             agent.add('Purchase cancelled.');
 //         }
 //     }
-
 //     async function storePreferences() {
 //         const request = {
 //             spreadsheetId,
